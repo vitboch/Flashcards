@@ -1,0 +1,61 @@
+body {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/0d/Germany_location_map.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.name {
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    background-color: blanchedalmond;
+    size: 40px;
+}
+
+.box {
+    width: 50%;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5em;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front {
+    background-color: blanchedalmond;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-color: orange;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.container:hover .card{
+    transform: rotateY(180deg);
+}
+
+
+
+
